@@ -1,12 +1,11 @@
-const form = document.getElementById('registr-form');
+const form = document.getElementById('login-form');
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const registationForm = event.target;
-  const { name, password, repeat } = registationForm;
-
-  const response = await fetch('/api/registration', {
+  const logForm = event.target;
+  const { name, password } = logForm;
+  const response = await fetch('api/login', {
     method: 'POST',
     body: JSON.stringify({
       name: name.value,
@@ -16,8 +15,8 @@ form.addEventListener('submit', async (event) => {
       'Content-Type': 'application/json',
     },
   });
-
-  if (response.ok) {
+  const result = await response.json();
+  if (result.success) {
     window.location.href = '/';
   }
 });

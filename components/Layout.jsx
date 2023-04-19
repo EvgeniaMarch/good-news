@@ -16,9 +16,7 @@ function Layout({ children }) {
         <link href="/style/style.css" rel="stylesheet" />
         <title>Good news</title>
       </head>
-      <body>
-        <main className="container">{children}</main>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
