@@ -1,0 +1,38 @@
+{
+  "name": "good-news",
+  "version": "1.0.0",
+  "description": "<details> <summary>Транскрипция звонка</summary> <p> Я слышал, что вы крутые программисты и можете написать программу, которая будет искать в интернетах вместо меня! Я хочу получить сайт, где я мог бы найти все положительные новости.  Или новости по ключевым словам!  Сделайте поля, где я мог бы добавить ключевые слова по которым я хочу видеть новости и по которым не хочу. Например: в первое поле (любимые темы новостей) я ввожу слово \"Рестораны\", и мне отображаются все новости, в которых есть это слово. Во второе поле (нелюбимые темы новостей) я ввожу слово \"Финансы\" и портал мне выдаёт все новости в которых есть слово \"Рестораны\", кроме тех, в которых есть слово \"Финансы\". Подключите популярные новостные порталы:",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js --ext js,jsx,json",
+    "dbr": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.2.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.12",
+    "@babel/preset-env": "^7.17.12",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/register": "^7.17.7",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "sequelize": "^6.6.5"
+  }
+}
