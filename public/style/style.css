@@ -1,0 +1,33 @@
+.header {
+  text-align: center;
+}
+
+.form-container {
+  border-radius: 20px;
+  background: #009b95;
+  padding: 50px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+
+.btn-light {
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  padding-bottom: 100px;
+}
+
+.icon-link-hover {
+  color: #009b95;
+  text-decoration-color: #009b95;
+}
