@@ -3,7 +3,9 @@ const loading = require('../../components/loading');
 
 loaderRouter.post('/showLoader', (req, res) => {
   try {
-    res.json({ html: res.renderComponent(loading, {}, { doctype: false }) });
+    res
+      .status(200)
+      .json({ html: res.renderComponent(loading, {}, { doctype: false }) });
   } catch (error) {
     console.error(error);
   }

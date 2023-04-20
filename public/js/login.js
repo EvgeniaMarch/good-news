@@ -21,7 +21,5 @@ form.addEventListener('submit', async (event) => {
     window.location.href = '/news';
   } else {
     errorDiv.textContent = result.message;
-    // console.log(result.message);
-    // console.log(errorDiv);
   }
 });

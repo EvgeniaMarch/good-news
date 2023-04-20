@@ -26,6 +26,8 @@ form.addEventListener('submit', async (event) => {
       method: 'POST',
       body: JSON.stringify({
         news,
+        search: search.value,
+        exeptionWord: exeptionWord.value,
       }),
       headers: {
         'Content-Type': 'application/json',

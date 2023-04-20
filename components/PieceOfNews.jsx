@@ -1,6 +1,7 @@
 const React = require('react');
 
 function pieceOfNewsGenerate({ pieceOfNews }) {
+  // console.log('vivodim eto', pieceOfNews);
   return (
     <a className="container-of-piece" href={pieceOfNews.link} target="_blank">
       <div className="content-of-piece">
