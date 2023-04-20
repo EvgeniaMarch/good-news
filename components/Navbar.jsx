@@ -19,7 +19,7 @@ function Navbar() {
               Поиск новостей
             </button>
             <ul class="dropdown-menu">
-              <form role="search" className='search-form'>
+              <form role="search" className="search-form">
                 <li id="search-dropdown">
                   <input
                     className="form-control"
@@ -41,7 +41,10 @@ function Navbar() {
                   />
                 </li>
                 <li>
-                  <button className="btn btn-light search-btn button" type="submit">
+                  <button
+                    className="btn btn-light search-btn button"
+                    type="submit"
+                  >
                     Искать
                   </button>
                 </li>
@@ -49,7 +52,7 @@ function Navbar() {
             </ul>
           </div>
 
-          <a className="icon-link nav" href="/auth/registration">
+          <a className="icon-link nav" href="/auth/logout">
             Выйти
           </a>
         </div>

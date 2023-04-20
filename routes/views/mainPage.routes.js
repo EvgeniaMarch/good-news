@@ -6,8 +6,12 @@ const { User } = require('../../db/models');
 
 mainRouter.get('/', async (req, res) => {
   const { userId } = req.session;
-  const user = await User.findOne({ where: { id: userId } });
-  res.status(200).send(res.renderComponent(mainPage, { user }));
+  if (userId) {
+    const user = await User.findOne({ where: { id: userId } });
+    res.status(200).send(res.renderComponent(mainPage, { user }));
+  } else {
+    res.redirect('/');
+  }
 });
 
 module.exports = mainRouter;
