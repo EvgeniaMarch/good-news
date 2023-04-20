@@ -13,6 +13,7 @@ const path = require('path');
 const authRouter = require('./routes/views/auth.route');
 const Navbar = require('./components/Navbar');
 const authApiRouter = require('./routes/api/authApiRoute');
+const navRote = require('./routes/views/main.route');
 
 const sessionConfig = require('./config/session');
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', authRouter);
 app.use('/api', authApiRouter);
+app.use('/', navRote);
 
 // app.get('/', (req, res) => {
 //   const navbar = React.createElement(Navbar);
