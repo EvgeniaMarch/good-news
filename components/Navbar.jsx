@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 function Navbar() {
   return (
     <Layout>
-      <nav className="navbar" style={{ background: '#009b95' }}>
+      <nav className="navbar" style={{ background: '#000264' }}>
         <div className="container-fluid">
           <a className="navbar-brand">Новости</a>
           <div className="nav-container">
@@ -20,6 +20,7 @@ function Navbar() {
                 type="search"
                 placeholder="Найти совпадения по словам"
                 aria-label="Search"
+                name="search"
               />
               <button className="btn btn-light search-btn" type="submit">
                 Искать

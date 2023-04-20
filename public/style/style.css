@@ -2,17 +2,26 @@
   text-align: center;
 }
 
+body {
+  background: #f2f2f2;
+  padding-top: 20px;
+}
+
 .form-container {
   border-radius: 20px;
-  background: #009b95;
+  background: white;
   padding: 50px 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 60%;
+  width: 40%;
+  box-shadow: rgb(179, 179, 179) 0px 0px 10px;
+  align-items: center;
 }
 
-.btn-light {
+.btn {
+  background: #000264;
+  color: white;
   display: block;
   margin: 0 auto;
 }
@@ -28,13 +37,16 @@
 }
 
 .icon-link-hover {
-  color: #009b95;
-  text-decoration-color: #009b95;
+  color: #000264;
+  text-decoration-color: #000264;
 }
 
 .navbar {
   height: 80px;
   padding: 0 30px;
+  border-radius: 20px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .nav-container {

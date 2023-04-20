@@ -43,7 +43,7 @@ function Registration() {
               />
             </div>
 
-            <button type="submit" className="btn btn-light">
+            <button type="submit" className="btn">
               Регистрация
             </button>
           </form>
