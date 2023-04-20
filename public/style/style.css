@@ -134,3 +134,8 @@ body {
 .error {
   color: red;
 }
+
+#search-dropdown {
+  display: flex;
+  flex-direction: column;
+}

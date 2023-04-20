@@ -9,30 +9,61 @@ function Navbar() {
           Новости
         </a>
         <div className="nav-container">
-          <select className="form-select" aria-label="Default select example">
-            <option selected>Самые популярные</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control"
-              type="search"
-              placeholder="Найти совпадения по словам"
-              aria-label="Search"
-              name="search"
-              id="searchInput"
-            />
-            <button className="btn btn-light search-btn" type="submit">
-              Искать
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown button
             </button>
-          </form>
+            <ul class="dropdown-menu">
+              <form role="search">
+                <li id="search-dropdown">
+                  <input
+                    className="form-control"
+                    type="search"
+                    placeholder="Найти совпадения по словам"
+                    aria-label="Search"
+                    name="search"
+                    id="searchInput"
+                  />
+                </li>
+                <li>
+                  <input
+                    className="form-control"
+                    type="search"
+                    placeholder="Найти совпадения по словам"
+                    aria-label="Search"
+                    name="search"
+                    id="searchInput"
+                  />
+                </li>
+                <li>
+                  <button className="btn btn-light search-btn" type="submit">
+                    Искать
+                  </button>
+                </li>
+              </form>
+            </ul>
+          </div>
+
           <a className="icon-link nav" href="/logot">
             Выйти
           </a>
         </div>
       </div>
+      <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"
+      ></script>
     </nav>
   );
 }
