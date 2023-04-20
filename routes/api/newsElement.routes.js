@@ -1,6 +1,4 @@
 const newsElementRouter = require('express').Router();
-// const pieceOfNewsGenerate = require('../../components/PieceOfNews');
-// const mainPage = require('../../components/mainPage');
 const NewsContainer = require('../../components/NewsContainer');
 const News = require('../../public/class');
 

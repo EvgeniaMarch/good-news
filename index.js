@@ -13,6 +13,7 @@ const mainRouter = require('./routes/views/mainPage.routes');
 const redirectRouter = require('./routes/redirect');
 const newsElementRouter = require('./routes/api/newsElement.routes');
 const authApiRouter = require('./routes/api/authApi.routes');
+const loaderRouter = require('./routes/api/loader.routes');
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use('/', redirectRouter);
 app.use('/auth', authRouter);
 app.use('/news', mainRouter);
 app.use('/news', newsElementRouter);
+app.use('/news', loaderRouter);
 app.use('/api', authApiRouter);
 
 app.listen(3000, () => {
