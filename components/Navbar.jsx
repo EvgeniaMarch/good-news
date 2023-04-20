@@ -11,12 +11,12 @@ function Navbar() {
         <div className="nav-container">
           <div class="dropdown">
             <button
-              class="btn btn-secondary dropdown-toggle"
+              class="btn btn-secondary dropdown-toggle filter"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown button
+              Поиск новостей
             </button>
             <ul class="dropdown-menu">
               <form role="search">
@@ -41,7 +41,7 @@ function Navbar() {
                   />
                 </li>
                 <li>
-                  <button className="btn btn-light search-btn" type="submit">
+                  <button className="btn btn-light search-btn button" type="submit">
                     Искать
                   </button>
                 </li>
