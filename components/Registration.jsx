@@ -7,6 +7,7 @@ function Registration() {
       <main className="container">
         <h1 className="header">Регистрация</h1>
         <div className="form-container">
+          <div className="error" id="errorDiv"></div>
           <form className="registr-form" id="registr-form">
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">

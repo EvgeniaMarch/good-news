@@ -79,3 +79,7 @@ body {
   color: white;
   text-decoration-color: white;
 }
+
+.error {
+  color: red;
+}
