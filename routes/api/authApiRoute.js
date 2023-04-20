@@ -32,4 +32,19 @@ authApiRouter.post('/registration', async (req, res) => {
 
   res.status(201).json({ success: true });
 });
+
+authApiRouter.post('/login', async (req, res) => {
+  const { login, password } = req.body;
+  const user = await User.findOne({ where: { login } });
+  if (!user || !(await bcrypt.compare(password, user.password))) {
+    res.json({
+      success: false,
+      message: 'Нет такого пользователя либо пароли не совпадают',
+    });
+    return;
+  }
+
+  req.session.userId = user.id;
+  res.json({ success: true });
+});
 module.exports = authApiRouter;

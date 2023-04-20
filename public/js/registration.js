@@ -1,4 +1,5 @@
 const form = document.getElementById('registr-form');
+const errorDiv = document.getElementById('errorDiv');
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -19,5 +20,10 @@ form.addEventListener('submit', async (event) => {
   });
   if (response.ok) {
     window.location.href = '/';
+  } else {
+    const result = await response.json();
+    errorDiv.textContent = result.message;
+    console.log(result.message);
+    console.log(errorDiv);
   }
 });

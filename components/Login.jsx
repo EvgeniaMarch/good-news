@@ -7,6 +7,7 @@ function Login() {
       <main className="container">
         <h1 className="header">Авторизация</h1>
         <div className="form-container">
+          <div className="error" id="errorDiv"></div>
           <form className="login-form" id="login-form">
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">

@@ -1,4 +1,5 @@
 const form = document.getElementById('login-form');
+const errorDiv = document.getElementById('errorDiv');
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -8,7 +9,7 @@ form.addEventListener('submit', async (event) => {
   const response = await fetch('api/login', {
     method: 'POST',
     body: JSON.stringify({
-      name: name.value,
+      login: name.value,
       password: password.value,
     }),
     headers: {
@@ -18,5 +19,9 @@ form.addEventListener('submit', async (event) => {
   const result = await response.json();
   if (result.success) {
     window.location.href = '/';
+  } else {
+    errorDiv.textContent = result.message;
+    // console.log(result.message);
+    // console.log(errorDiv);
   }
 });
