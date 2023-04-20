@@ -42,7 +42,7 @@ function Login() {
           <a
             className="icon-link icon-link-hover"
             style={{ '--bs-link-hover-color-rgb': '25, 135, 84' }}
-            href="/auth/login"
+            href="/auth/registration"
           >
             Регистрация
           </a>
