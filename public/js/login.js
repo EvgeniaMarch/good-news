@@ -6,7 +6,7 @@ form.addEventListener('submit', async (event) => {
 
   const logForm = event.target;
   const { name, password } = logForm;
-  const response = await fetch('api/login', {
+  const response = await fetch('/api/login', {
     method: 'POST',
     body: JSON.stringify({
       login: name.value,
@@ -18,7 +18,7 @@ form.addEventListener('submit', async (event) => {
   });
   const result = await response.json();
   if (result.success) {
-    window.location.href = '/';
+    window.location.href = '/news';
   } else {
     errorDiv.textContent = result.message;
     // console.log(result.message);

@@ -11,7 +11,7 @@ function Registration() {
           <form className="registr-form" id="registr-form">
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
-                Введите ваше имя
+                Логин
               </label>
               <input
                 type="name"
@@ -19,17 +19,19 @@ function Registration() {
                 className="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                required
               />
             </div>
             <div className="mb-3">
               <label htmlFor="exampleInputPassword1" className="form-label">
-                Придумайте пароль
+                Пароль
               </label>
               <input
                 name="password"
                 type="password"
                 className="form-control"
                 id="exampleInputPassword1"
+                required
               />
             </div>
             <div className="mb-3">
@@ -41,6 +43,7 @@ function Registration() {
                 type="password"
                 className="form-control"
                 id="repeatInputPassword1"
+                required
               />
             </div>
 
@@ -54,7 +57,7 @@ function Registration() {
           <a
             className="icon-link icon-link-hover"
             style={{ '--bs-link-hover-color-rgb': '25, 135, 84' }}
-            href="/login"
+            href="/auth/login"
           >
             Войти
             <svg className="bi" aria-hidden="true">
