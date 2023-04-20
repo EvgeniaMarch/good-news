@@ -1,15 +1,43 @@
 const newsElementRouter = require('express').Router();
-// const pieceOfNewsGenerate = require('../../components/PieceOfNews');
-// const mainPage = require('../../components/mainPage');
 const NewsContainer = require('../../components/NewsContainer');
 const News = require('../../public/class');
 
-newsElementRouter.post('/getNews', (req, res) => {
+const { History } = require('../../db/models');
+
+newsElementRouter.post('/getNews', async (req, res) => {
   try {
-    const arrayOfNews = req.body.news.results.map(
-      (el) => new News(el.title, el.description, el.image_url, el.link)
-    );
-    res.json({
+    const { search, exeptionWord } = req.body;
+
+    const { userId } = req.session;
+
+    await History.create({
+      user_id: userId,
+      mainWord: search,
+      exception: exeptionWord,
+    });
+
+    let arrayOfNews = req.body.news.results.map((el) => {
+      const content = el.title + el.description;
+      // console.log(content);
+      if (el.link.includes('.ru') || el.link.includes('.com')) {
+        if (exeptionWord) {
+          if (
+            !content
+              .toLowerCase()
+              .trim()
+              .includes(exeptionWord.toLowerCase().trim())
+          ) {
+            return new News(el.title, el.description, el.image_url, el.link);
+          }
+        } else {
+          return new News(el.title, el.description, el.image_url, el.link);
+        }
+      }
+    });
+    arrayOfNews = arrayOfNews.filter((el) => el !== undefined);
+    console.log(arrayOfNews);
+
+    res.status(200).json({
       html: res.renderComponent(
         NewsContainer,
         { news: arrayOfNews },

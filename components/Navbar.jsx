@@ -1,5 +1,4 @@
 const React = require('react');
-const Layout = require('./Layout');
 
 function Navbar() {
   return (
@@ -20,12 +19,12 @@ function Navbar() {
               Поиск новостей
             </button>
             <ul class="dropdown-menu">
-              <form role="search">
+              <form role="search" className='search-form'>
                 <li id="search-dropdown">
                   <input
                     className="form-control"
                     type="search"
-                    placeholder="Найти совпадения по словам"
+                    placeholder="Найти новости по слову"
                     aria-label="Search"
                     name="search"
                     id="searchInput"
@@ -35,10 +34,10 @@ function Navbar() {
                   <input
                     className="form-control"
                     type="search"
-                    placeholder="Найти совпадения по словам"
+                    placeholder="Исключить новости со словом"
                     aria-label="Search"
-                    name="search"
-                    id="searchInput"
+                    name="exeptionWord"
+                    id="exeptionWord"
                   />
                 </li>
                 <li>

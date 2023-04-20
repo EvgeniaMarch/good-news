@@ -92,7 +92,7 @@ body {
 
 .container-of-piece {
   display: flex;
-  width: 85%;
+  width: 1200px;
   background-color: white;
   border-radius: 20px;
   padding: 22px;

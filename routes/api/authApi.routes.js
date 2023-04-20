@@ -26,8 +26,6 @@ authApiRouter.post('/registration', async (req, res) => {
       password: await bcrypt.hash(password, 5),
     });
 
-    console.log(user);
-
     req.session.userId = user.id;
 
     res.status(201).json({ success: true });

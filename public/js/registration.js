@@ -23,7 +23,5 @@ form.addEventListener('submit', async (event) => {
   } else {
     const result = await response.json();
     errorDiv.textContent = result.message;
-    console.log(result.message);
-    console.log(errorDiv);
   }
 });
