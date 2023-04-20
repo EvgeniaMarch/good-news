@@ -9,14 +9,14 @@ form.addEventListener('submit', async (event) => {
   const response = await fetch('/api/registration', {
     method: 'POST',
     body: JSON.stringify({
-      name: name.value,
+      login: name.value,
       password: password.value,
+      repeat: repeat.value,
     }),
     headers: {
       'Content-Type': 'application/json',
     },
   });
-
   if (response.ok) {
     window.location.href = '/';
   }
