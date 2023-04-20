@@ -49,7 +49,7 @@ function Navbar() {
             </ul>
           </div>
 
-          <a className="icon-link nav" href="/logot">
+          <a className="icon-link nav" href="/auth/registration">
             Выйти
           </a>
         </div>
