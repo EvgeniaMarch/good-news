@@ -38,6 +38,15 @@ function Login() {
             </button>
           </form>
         </div>
+        <div className="link-to-registration">
+          <a
+            className="icon-link icon-link-hover"
+            style={{ '--bs-link-hover-color-rgb': '25, 135, 84' }}
+            href="/auth/registration"
+          >
+            Регистрация
+          </a>
+        </div>
       </main>
       <script src="/js/login.js" />
     </Layout>

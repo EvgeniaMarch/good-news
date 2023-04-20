@@ -11,4 +11,11 @@ authRouter.get('/login', (req, res) => {
   res.send(res.renderComponent(Login));
 });
 
+authRouter.get('/logout', (req, res) => {
+  req.session.destroy(() => {
+    res.clearCookie('user_sid');
+    res.redirect('/auth/registration');
+  });
+});
+
 module.exports = authRouter;

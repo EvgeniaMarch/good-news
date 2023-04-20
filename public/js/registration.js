@@ -19,7 +19,7 @@ form.addEventListener('submit', async (event) => {
     },
   });
   if (response.ok) {
-    window.location.href = '/';
+    window.location.href = '/news';
   } else {
     const result = await response.json();
     errorDiv.textContent = result.message;
