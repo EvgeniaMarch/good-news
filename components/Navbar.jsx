@@ -15,6 +15,7 @@ function Navbar() {
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+              data-bs-auto-close="outside"
             >
               Поиск новостей
             </button>
