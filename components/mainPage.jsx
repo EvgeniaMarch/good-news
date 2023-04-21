@@ -11,7 +11,7 @@ function mainPage({ user, topics }) {
     subtitle2: 'Вот темы, которые интересовали тебя в прошлый раз:',
     subtitle3: <NewsTopics topics={topics} />,
     image:
-      'https://i.pinimg.com/474x/2d/39/e8/2d39e8bfe8fe9f1eae1f1d2b7baff9e5.jpg',
+      '/images/picNotFoundVanya.png',
   };
   return (
     <Layout>

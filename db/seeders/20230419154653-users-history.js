@@ -7,7 +7,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await User.create(
       {
-        login: 'mrThomasTeller',
+        login: 'Sensei',
         password: '******',
         Histories: [
           {
@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         include: [History],
-      },
+      }
     );
   },
 
