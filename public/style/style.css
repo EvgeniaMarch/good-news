@@ -192,3 +192,21 @@ h5 {
   margin-top: 20px;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+.most-popular {
+  margin-right: 30px;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.most-popular-show {
+  transform: translate(13px, 0px);
+}
+
+.subtitle-of-piece {
+  overflow: hidden;
+  max-height: 96px;
+  text-overflow: ellipsis;
+}

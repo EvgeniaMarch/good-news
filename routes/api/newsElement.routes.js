@@ -18,7 +18,6 @@ newsElementRouter.post('/getNews', async (req, res) => {
 
     let arrayOfNews = req.body.news.results.map((el) => {
       const content = el.title + el.description;
-      // console.log(content);
       if (el.link.includes('.ru') || el.link.includes('.com')) {
         if (exeptionWord) {
           if (
@@ -35,7 +34,6 @@ newsElementRouter.post('/getNews', async (req, res) => {
       }
     });
     arrayOfNews = arrayOfNews.filter((el) => el !== undefined);
-    console.log(arrayOfNews);
 
     res.status(200).json({
       html: res.renderComponent(

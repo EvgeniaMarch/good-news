@@ -4,18 +4,17 @@ const Navbar = require('./Navbar');
 const NewsTopics = require('./newsTopics');
 const PieceOfNews = require('./PieceOfNews');
 
-function mainPage({ user, topics }) {
+function mainPage({ user, mostPopularArray, topics }) {
   const firstTry = {
     title: `Привет, ${user.login}!`,
     subtitle1: 'Читай самые актуальные новости на нашем портале.',
     subtitle2: 'Вот темы, которые интересовали тебя в прошлый раз:',
     subtitle3: <NewsTopics topics={topics} />,
-    image:
-      '/images/picNotFoundVanya.png',
+    image: '/images/picNotFoundVanya.png',
   };
   return (
     <Layout>
-      <Navbar />
+      <Navbar mostPopularArray={mostPopularArray} />
       <div className="container-of-news">
         <PieceOfNews pieceOfNews={firstTry} />
       </div>
