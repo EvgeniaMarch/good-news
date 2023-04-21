@@ -8,7 +8,7 @@ function mainPage({ user }) {
     title: `Привет, ${user.login}!`,
     subtitle: 'Начни искать и что-нибудь обязательно найдется',
     image:
-      'https://i.pinimg.com/474x/2d/39/e8/2d39e8bfe8fe9f1eae1f1d2b7baff9e5.jpg',
+      '/images/picNotFoundVanya.png',
   };
   return (
     <Layout>

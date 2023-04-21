@@ -11,11 +11,15 @@ function notFoundPage() {
         <title>Упс! Ничего не найдено!</title>
       </head>
       <body>
-        <div id='notfound'>
+        <div id="notfound">
           <h1>Упс! Ничего не найдено!</h1>
-          <img id='image'
-            src="https://t3.ftcdn.net/jpg/01/01/89/46/360_F_101894688_RVSZUtDfPR6Cr5eBDQI7Qo5pZ01jmyK3.jpg"
+          <img
+            id="image"
+            src="/images/404pageVanya.png"
             alt="not found"
+            width={500}
+            height={300}
+            style={{ boxShadow: 'rgb(179, 179, 179) 0px 0px 10px;' }}
           />
           <h3>Ошибка 404!</h3>
         </div>

@@ -5,6 +5,10 @@ form.addEventListener('submit', async (event) => {
   try {
     event.preventDefault();
 
+    const mostPopular = await fetch('/news/getPopular', {
+      method: 'POST',
+    });
+
     const loader = await fetch('/news/showLoader', {
       method: 'POST',
     });

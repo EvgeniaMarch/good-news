@@ -4,7 +4,7 @@ function Navbar({}) {
   return (
     <>
       <link rel="stylesheet" href="/style/loader.css" />
-      <div className="loading"></div>
+      <img src="/images/HeadOfVanya.png" alt="Vanya" className="loading" />
     </>
   );
 }
