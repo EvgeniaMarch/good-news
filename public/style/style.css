@@ -136,6 +136,7 @@ body {
 
 .error {
   color: red;
+  margin-bottom: 15px;
 }
 
 #search-dropdown {
@@ -159,4 +160,53 @@ body {
   margin-left: 113px;
   background-color: white;
   color: #000000;
+}
+
+.container-of-news {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: x-large;
+  color: rgb(60, 60, 60);
+}
+
+.subtitle-of-piece1,
+.subtitle-of-piece2 {
+  font-size: large;
+  color: rgb(60, 60, 60);
+  margin-bottom: 5px;
+}
+
+#first-container {
+  transform: none;
+  color: white;
+}
+
+#first-container:hover {
+  color: black;
+}
+
+#nasha-button {
+  margin-top: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.most-popular {
+  margin-right: 30px;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.most-popular-show {
+  transform: translate(13px, 0px);
+}
+
+.subtitle-of-piece {
+  overflow: hidden;
+  max-height: 96px;
+  text-overflow: ellipsis;
 }
