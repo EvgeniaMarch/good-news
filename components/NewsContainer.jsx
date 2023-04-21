@@ -2,7 +2,6 @@ const React = require('react');
 const PieceOfNews = require('./PieceOfNews');
 
 function pieceOfNewsContainer({ news }) {
-  // console.log(news);
   return (
     <div className="">
       {news.map((elem, index) => (

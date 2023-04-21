@@ -5,7 +5,6 @@ const { User } = require('../../db/models');
 
 authApiRouter.post('/registration', async (req, res) => {
   const { login, password, repeat } = req.body;
-  console.log('rq.body', req.body);
   if (login && password && repeat) {
     if (password !== repeat) {
       res.status(403).json({ success: false, message: 'Пароли не совпадают' });
