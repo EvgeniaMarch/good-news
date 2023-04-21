@@ -1,5 +1,5 @@
 const notFoundRouter = require('express').Router();
-const notFoundPage = require('../../components/404notFount');
+const notFoundPage = require('../../components/404notFound');
 
 notFoundRouter.get('/', (req, res) => {
   try {

@@ -40,7 +40,7 @@ authApiRouter.post('/login', async (req, res) => {
   if (!user || !(await bcrypt.compare(password, user.password))) {
     res.json({
       success: false,
-      message: 'Нет такого пользователя либо пароли не совпадают',
+      message: 'Нет такого пользователя, либо пароли не совпадают',
     });
     return;
   }

@@ -15,7 +15,7 @@ const redirectRouter = require('./routes/redirect');
 const newsElementRouter = require('./routes/api/newsElement.routes');
 const authApiRouter = require('./routes/api/authApi.routes');
 const loaderRouter = require('./routes/api/loader.routes');
-const notFoundRouter = require('./routes/views/404notFount.routes');
+const notFoundRouter = require('./routes/views/404notFound.routes');
 
 const app = express();
 
