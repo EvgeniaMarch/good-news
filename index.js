@@ -16,7 +16,6 @@ const newsElementRouter = require('./routes/api/newsElement.routes');
 const authApiRouter = require('./routes/api/authApi.routes');
 const loaderRouter = require('./routes/api/loader.routes');
 const notFoundRouter = require('./routes/views/404notFount.routes');
-const getMostPopular = require('./routes/api/getMostPopular.routes');
 
 const app = express();
 
@@ -33,7 +32,6 @@ app.use('/news', mainRouter);
 app.use('/news', newsElementRouter);
 app.use('/news', loaderRouter);
 app.use('/api', authApiRouter);
-app.use('/news', getMostPopular);
 app.use('/*', notFoundRouter);
 
 app.listen(3000, () => {
