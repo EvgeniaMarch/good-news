@@ -5,25 +5,81 @@ const { User, History } = require('../models');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await User.create(
-      {
-        login: 'Sensei',
-        password: '******',
-        Histories: [
-          {
-            mainWord: 'Не кури',
-            exception: 'динозавры',
-          },
-          {
-            mainWord: 'акции ивановского завода яиц',
-            exception: 'урал',
-          },
-          {
-            mainWord: 'крокодилы',
-            exception: 'динозавры',
-          },
-        ],
-      },
+    await User.bulkCreate(
+      [
+        {
+          login: 'Женя',
+          password: await bcrypt.hash('123', 5),
+          Histories: [
+            {
+              mainWord: 'Вызов фильм',
+              exception: 'Что-нибудь',
+            },
+            {
+              mainWord: 'Эльбрус',
+              exception: 'Москва',
+            },
+            {
+              mainWord: 'крокодилы',
+              exception: 'динозавры',
+            },
+          ],
+        },
+        {
+          login: 'Ваня',
+          password: await bcrypt.hash('123', 5),
+          Histories: [
+            {
+              mainWord: 'Вызов фильм',
+              exception: 'Что-нибудь',
+            },
+            {
+              mainWord: 'Эльбрус',
+              exception: 'Москва',
+            },
+            {
+              mainWord: 'фильмы',
+              exception: 'динозавры',
+            },
+          ],
+        },
+        {
+          login: 'Юля',
+          password: await bcrypt.hash('123', 5),
+          Histories: [
+            {
+              mainWord: 'Вызов фильм',
+              exception: 'Что-нибудь',
+            },
+            {
+              mainWord: 'Эльбрус',
+              exception: 'Москва',
+            },
+            {
+              mainWord: 'аллигаторы',
+              exception: 'динозавры',
+            },
+          ],
+        },
+        {
+          login: 'Ролан',
+          password: await bcrypt.hash('123', 5),
+          Histories: [
+            {
+              mainWord: 'Фильмы',
+              exception: 'Что-нибудь',
+            },
+            {
+              mainWord: 'Эльбрус',
+              exception: 'Москва',
+            },
+            {
+              mainWord: 'аллигаторы',
+              exception: 'динозавры',
+            },
+          ],
+        },
+      ],
       {
         include: [History],
       }
